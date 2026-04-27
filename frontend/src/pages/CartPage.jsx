@@ -73,11 +73,11 @@ export default function CartPage() {
                 transition={{ delay: i * 0.05 }}
                 className="glass-card p-5"
               >
-                <div className="flex gap-5">
+                <div className="flex flex-col sm:flex-row gap-5">
                   <img
                     src={item.images?.[0] || item.image}
                     alt={item.name}
-                    className="w-24 h-24 object-cover rounded-xl bg-dark-600"
+                    className="w-full sm:w-24 h-48 sm:h-24 object-cover rounded-xl bg-dark-600"
                   />
                   <div className="flex-1 min-w-0">
                     <div className="flex justify-between">
@@ -93,7 +93,7 @@ export default function CartPage() {
                       </button>
                     </div>
 
-                    <div className="flex items-center justify-between mt-4">
+                    <div className="flex flex-wrap items-center justify-between gap-4 mt-4">
                       <div className="flex items-center glass-card rounded-xl overflow-hidden">
                         <button
                           onClick={() => handleQtyChange(item._id, item.quantity - 1)}

@@ -124,8 +124,8 @@ export default function CheckoutPage() {
                 <h2 className="text-xl font-bold text-slate-900 dark:text-white font-poppins">Shipping Address</h2>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="col-span-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="sm:col-span-2">
                   <label className="text-xs text-slate-400 mb-1 block">Full Name</label>
                   <input
                     className={INPUT_CLASS}
@@ -134,7 +134,7 @@ export default function CheckoutPage() {
                     onChange={(e) => setAddress({ ...address, name: e.target.value })}
                   />
                 </div>
-                <div className="col-span-2">
+                <div className="sm:col-span-2">
                   <label className="text-xs text-slate-400 mb-1 block">Address</label>
                   <input
                     className={INPUT_CLASS}
